@@ -1,4 +1,12 @@
 class CompaniesController < ApplicationController
+  def index
+    @search = Company.search do
+      fulltext params[:search]
+    end
+
+    @companies = @search.results
+  end
+
   def new
     @company = Company.new
   end
@@ -38,6 +46,6 @@ class CompaniesController < ApplicationController
 
   private
     def company_params
-      params.require(:company).permit(:name, :email)
+      params.require(:company).permit(:name, :email, :phone, :address)
     end
 end

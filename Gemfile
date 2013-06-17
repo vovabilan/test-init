@@ -11,8 +11,12 @@ gem 'simple_form', '~> 3.0.0.beta1' # Rails forms made easy
 
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4' # authentication solution for Rails
 
+gem "kaminari"
+
 gem 'nifty-generators'
 gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
 
 # Gems used only for assets and not required
 # in production environments by default.

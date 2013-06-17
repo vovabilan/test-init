@@ -18,5 +18,14 @@ module TestHolding
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.to_prepare do
+      Devise::SessionsController.layout 'signin'
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "signin" }
+      Devise::ConfirmationsController.layout "signin"
+      Devise::UnlocksController.layout "signin"
+      Devise::PasswordsController.layout "signin"
+    end
+    config.cookie_secret = '3b161f7668f938d1aeb73e1137964f8d5ebaf32b9173c2130ecb73b95b610702b77370640dce7e76700fb228f35f7865ab2a5ccd22d00563504a2ea9c3d8dffe'
   end
 end

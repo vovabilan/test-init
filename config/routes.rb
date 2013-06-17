@@ -1,7 +1,12 @@
 TestHolding::Application.routes.draw do
 
+  devise_for :admins
   devise_for :users
   scope "(:locale)", :locale => /en|uk|ru/ do
+    devise_for :users, path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'registration', password: 'secret', confirmation: 'verification' }
+    devise_for :admins, :controllers => { :sessions => "admins/sessions" }
+    get "welcome/index"
+    
     resources :companies
     resources :users, only: [:new, :create, :edit]
     resources :wlcome, only: [:new, :create, :destroy, :index]
