@@ -1,0 +1,10 @@
+uk:
+  activerecord:
+    attributes:
+      user:
+        email: E-mail
+        password: Пароль
+        password_confirmation: Підтвердження паролю
+        remember_me: "Запам'ятати мене"
+        role_id: Роль
+

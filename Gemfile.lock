@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/hsbt/sunspot.git
+  revision: 7ecfc66d0200a71442147ea58268e98d5302dc9c
+  branch: enabled-rails4
+  specs:
+    sunspot (2.0.0)
+      pr_geohash (~> 1.0)
+      rsolr (~> 1.0.7)
+    sunspot_rails (2.0.0)
+      nokogiri
+      sunspot (= 2.0.0)
+    sunspot_solr (2.0.0)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 6b5988d756d780903bf8c9ccb3e2b3b724ccebe8
   branch: rails4
@@ -50,8 +63,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    fattr (2.2.1)
-    highline (1.6.19)
     hike (1.2.3)
     i18n (0.6.4)
     jbuilder (1.0.2)
@@ -71,17 +82,11 @@ GEM
     minitest (4.7.4)
     multi_json (1.7.6)
     mysql2 (0.3.11)
-    nifty-generators (0.4.6)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
-    options (2.3.0)
-      fattr
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
-    progress_bar (1.0.0)
-      highline (~> 1.6.1)
-      options (~> 2.3.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -129,13 +134,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sunspot (2.0.0)
-      pr_geohash (~> 1.0)
-      rsolr (~> 1.0.7)
-    sunspot_rails (2.0.0)
-      nokogiri
-      sunspot (= 2.0.0)
-    sunspot_solr (2.0.0)
     temple (0.6.5)
     thor (0.18.1)
     thread_safe (0.1.0)
@@ -163,13 +161,11 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mysql2
-  nifty-generators
-  progress_bar
   rails (= 4.0.0.beta1)
   sass-rails (~> 4.0.0.beta1)
   simple_form (~> 3.0.0.beta1)
   slim-rails
-  sunspot_rails
-  sunspot_solr
+  sunspot_rails!
+  sunspot_solr!
   turbolinks
   uglifier (>= 1.0.3)

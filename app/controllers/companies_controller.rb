@@ -3,8 +3,8 @@ class CompaniesController < ApplicationController
     @search = Company.search do
       fulltext params[:search]
     end
-
     @companies = @search.results
+    render 'welcome/index'
   end
 
   def new
