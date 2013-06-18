@@ -1,0 +1,10 @@
+h2= t('.sign_up', default: 'Sign up')
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal'}) do |f|
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
+  = f.input :role_id, as: :select, required: false, collection: Role.all, selected: Role.first
+  .control-group
+    .controls
+      = f.submit t('.sign_up', default: 'Sign up'), class: 'btn btn-primary'
+= render 'devise/shared/links'

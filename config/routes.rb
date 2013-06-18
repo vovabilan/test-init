@@ -1,10 +1,10 @@
 TestHolding::Application.routes.draw do
 
-  devise_for :users
   scope "(:locale)", :locale => /en|uk|ru/ do
+    devise_for :users, path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'registration', password: 'secret', confirmation: 'verification' }
+    
     resources :companies
-    resources :users, only: [:new, :create, :edit]
-    resources :wlcome, only: [:new, :create, :destroy, :index]
+    resources :welcome, only: [:new, :create, :destroy, :index]
 
     root 'welcome#index'
   end

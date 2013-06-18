@@ -1,12 +1,7 @@
 class WelcomeController < ApplicationController
-  def index
-    @companies = Company.all
+  PER_PAGE = 10
 
-    @search = Welcome.search do
-      fulltext params[:search]
-      with(:phone)
-      facet(:address)
-    end
-    @welcome = @search.results
+  def index
+    @companies = Company.order("name").page(params[:page]).per(PER_PAGE)
   end
 end
