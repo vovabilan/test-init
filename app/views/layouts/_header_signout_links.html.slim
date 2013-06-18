@@ -1,0 +1,7 @@
+.header-signin-links
+  = t('.logged_in_as')
+  '&nbsp;
+  strong= current_user.email
+  = link_to t('.edit-profile'), edit_user_registration_path
+  '|
+  = link_to t('.logout'), destroy_user_session_path, method: :delete

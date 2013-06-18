@@ -1,2 +1,15 @@
+= form_tag companies_path, :method => :get do
+  p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", :name => nil
+
+#companies
+  .companies
+    p
+      | Company:
+      table
+        = render @companies
+= paginate @companies
+
 a href='/companies/new'
-  span= t('.new-company')
+  span= t('.new-company') if current_user
