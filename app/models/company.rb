@@ -7,5 +7,6 @@ class Company < ActiveRecord::Base
 
   searchable do
     text :name, :boost => 5
+    string :address, :phone
   end
 end

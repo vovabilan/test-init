@@ -1,2 +1,15 @@
 = render_signed_links
 = render_flash
+
+li
+  a href="#" role="button"
+    ul.f32.current-flag
+      li.flag.f32.pull-left class="#{flag_code(I18n.locale)}"
+      li.caret.pull-left
+  ul.f24.dropdown-menu
+    li.flag.f24.us
+      = link_to t('layouts.english'), "#{root_path(:en)}"
+    li.flag.f24.ua 
+      = link_to t('layouts.ukrainian'), "#{root_path(:uk)}"
+    li.flag.f24.ru
+      = link_to t('layouts.russian'), "#{root_path(:ru)}"
