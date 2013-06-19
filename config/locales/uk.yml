@@ -1,4 +1,20 @@
 uk:
+  layouts:
+    header_signin_links:
+      sign-up: Зареєструватися
+      login: Увійти
+    header_signout_links:
+      logged_in_as: Ви увійшли як
+      edit-profile: Редагувати профайл
+      logout: Вихід
+    hellp: Допомога
+    about-us: Про нас
+    english: Англійський
+    ukrainian: Українська
+    russian: Російська
   welcome:
     index:
       new-company: Нова компанія
+      company: Компанія
+      phone: Телефон
+      address: Адреса

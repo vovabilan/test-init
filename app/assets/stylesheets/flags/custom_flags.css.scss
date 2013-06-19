@@ -1,0 +1,18 @@
+.f32.current-flag .flag {
+  position: relative;
+  top: -5px;
+}
+
+.f24.dropdown-menu {
+  .flag {
+    margin: 4px 0 6px 10px;
+    padding: 0 0 0 29px;
+    line-height: 26px;
+    width: 70%;
+    &:hover {
+      color: #9d261d;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
