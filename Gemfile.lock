@@ -1,4 +1,17 @@
 GIT
+  remote: git://github.com/hsbt/sunspot.git
+  revision: 7ecfc66d0200a71442147ea58268e98d5302dc9c
+  branch: enabled-rails4
+  specs:
+    sunspot (2.0.0)
+      pr_geohash (~> 1.0)
+      rsolr (~> 1.0.7)
+    sunspot_rails (2.0.0)
+      nokogiri
+      sunspot (= 2.0.0)
+    sunspot_solr (2.0.0)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 6b5988d756d780903bf8c9ccb3e2b3b724ccebe8
   branch: rails4
@@ -58,6 +71,9 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -66,7 +82,6 @@ GEM
     minitest (4.7.4)
     multi_json (1.7.6)
     mysql2 (0.3.11)
-    nifty-generators (0.4.6)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
@@ -119,12 +134,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sunspot (2.0.0)
-      pr_geohash (~> 1.0)
-      rsolr (~> 1.0.7)
-    sunspot_rails (2.0.0)
-      nokogiri
-      sunspot (= 2.0.0)
     temple (0.6.5)
     thor (0.18.1)
     thread_safe (0.1.0)
@@ -150,12 +159,13 @@ DEPENDENCIES
   devise!
   jbuilder (~> 1.0.1)
   jquery-rails
+  kaminari
   mysql2
-  nifty-generators
   rails (= 4.0.0.beta1)
   sass-rails (~> 4.0.0.beta1)
   simple_form (~> 3.0.0.beta1)
   slim-rails
-  sunspot_rails
+  sunspot_rails!
+  sunspot_solr!
   turbolinks
   uglifier (>= 1.0.3)

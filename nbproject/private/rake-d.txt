@@ -74,6 +74,7 @@ railties\:install\:migrations=
 routes=
 secret=
 stats=
+sunspot\:reindex[batch_size,models]=
 test=
 test\:all=
 test\:all\:db=
