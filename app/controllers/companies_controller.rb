@@ -2,6 +2,7 @@ class CompaniesController < ApplicationController
   def index
     @search = Company.search do
       fulltext params[:search]
+      facet(:address)
     end
     @companies = @search.results
     render 'welcome/index'
@@ -13,7 +14,7 @@ class CompaniesController < ApplicationController
 
   def update
 
-    if @company.update_attributes params[:company]
+    if @company.update_attributes company_params
       redirect_to companies_path(@company)
     else
       render :edit
@@ -21,7 +22,7 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new params[:company]
+    @company = Company.new company_params
 
     if @company.valid?
       @company.save

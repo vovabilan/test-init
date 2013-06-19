@@ -1,4 +1,20 @@
 ru:
+  layouts:
+    header_signin_links:
+      sign-up: Зарегестрироватся
+      login: Войти
+    header_signout_links:
+      logged_in_as: Вы вошли как
+      edit-profile: Редактировать профайл
+      logout: Выход
+    hellp: Помощь
+    about-us: Про нас
+    english: Англиский
+    ukrainian: Украинский
+    russian: Русский
   welcome:
     index:
       new-company: Новая компания
+      company: Компания
+      phone: Телефон
+      address: Адрес
